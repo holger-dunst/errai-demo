@@ -14,6 +14,7 @@ import org.jboss.errai.ui.shared.api.annotations.EventHandler;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
 import org.slf4j.Logger;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.event.Event;
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
@@ -40,6 +41,15 @@ public class App extends Composite {
     @Inject
     @DataField
     private Label responseLabel;
+
+    @Inject
+    @DataField
+    private InfoIconWidget messageInfo;
+
+    @PostConstruct
+    private void init() {
+        this.messageInfo.setInnerHTML("Please enter a message.<br>The message is sent to the server.");
+    }
 
     @EventHandler("send")
     private void onClickSend(ClickEvent e) {
