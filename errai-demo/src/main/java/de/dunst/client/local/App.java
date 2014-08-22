@@ -51,7 +51,7 @@ public class App extends Composite {
      * Fires a CDI HelloMessage with the current contents of the message textbox.
      */
     void fireMessage() {
-        String text = message.getText();
+        final String text = message.getText();
         HelloMessage event = new HelloMessage(text);
         messageEvent.fire(event);
     }
