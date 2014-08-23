@@ -19,7 +19,7 @@ import javax.inject.Inject;
 @Dependent
 public class InfoIconWidget extends Composite {
     @Inject
-    private InfoWidget infoWidget;
+    private PopoverWidget popoverWidget;
 
     private String content;
 
@@ -29,20 +29,20 @@ public class InfoIconWidget extends Composite {
 
     @PostConstruct
     private void init() {
-        infoWidget.hide();
+        popoverWidget.hide();
         content = getElement().getInnerText();
         getElement().setInnerText("");
         addDomHandler(new MouseOverHandler() {
             @Override
             public void onMouseOver(final MouseOverEvent event) {
-                infoWidget.setInnerHTML(content);
-                infoWidget.show(InfoIconWidget.this);
+                popoverWidget.setInnerHTML(content);
+                popoverWidget.show(InfoIconWidget.this);
             }
         }, MouseOverEvent.getType());
         addDomHandler(new MouseOutHandler() {
             @Override
             public void onMouseOut(final MouseOutEvent event) {
-                infoWidget.hide();
+                popoverWidget.hide();
             }
         }, MouseOutEvent.getType());
     }

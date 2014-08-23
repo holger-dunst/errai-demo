@@ -14,13 +14,13 @@ import javax.annotation.PreDestroy;
 import javax.enterprise.context.Dependent;
 
 /**
- * Implementation of a Bootstrap tooltip.
+ * Implementation of a Bootstrap popover.
  * <p/>
  * Created by Holger Dunst on 11.08.2014.
  */
-@Templated("InfoWidget.html")
+@Templated("PopoverWidget.html")
 @Dependent
-public class InfoWidget extends Composite {
+public class PopoverWidget extends Composite {
 
     /**
      * This is the widget that contains the user-supplied content we show in the popover.
@@ -67,7 +67,7 @@ public class InfoWidget extends Composite {
      */
     @PostConstruct
     private void init() {
-        this.addStyleName("popover-content");
+        //this.addStyleName("popover-content");
         RootPanel.get().add(this);
     }
 
