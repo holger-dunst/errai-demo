@@ -67,7 +67,6 @@ public class PopoverWidget extends Composite {
      */
     @PostConstruct
     private void init() {
-        //this.addStyleName("popover-content");
         RootPanel.get().add(this);
     }
 
