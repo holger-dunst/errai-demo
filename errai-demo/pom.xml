@@ -12,7 +12,7 @@
     <name>Errai::Demo</name>
 
     <properties>
-        <errai.version>3.0.2.Final</errai.version>
+        <errai.version>3.0.3-SNAPSHOT</errai.version>
         <gwt.version>2.6.1</gwt.version>
         <slf4j.version>1.5.11</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -109,6 +109,17 @@
         <repository>
             <id>JBOSS_NEXUS</id>
             <url>http://repository.jboss.org/nexus/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>snapshots.jboss.org</id>
+            <name>JBoss Snapshot Repository</name>
+            <url>http://snapshots.jboss.org/maven2</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
