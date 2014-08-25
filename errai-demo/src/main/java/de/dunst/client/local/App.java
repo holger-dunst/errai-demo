@@ -48,6 +48,7 @@ public class App extends Composite {
 
     @PostConstruct
     private void init() {
+        this.responseLabel.setVisible(false);
         this.messageInfo.setInnerHTML("Please enter a message.<br>The message is sent to the server.");
     }
 

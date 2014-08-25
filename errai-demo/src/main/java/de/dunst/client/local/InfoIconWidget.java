@@ -15,7 +15,7 @@ import javax.inject.Inject;
  * Created by Holger Dunst on 11.08.2014.
  * <p/>
  */
-@Templated("InfoIconWidget.html")
+@Templated("App.html#messageInfo")
 @Dependent
 public class InfoIconWidget extends Composite {
     @Inject
